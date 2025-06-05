@@ -18,10 +18,10 @@ export default function Card({
       <p className="text-sm text-slate-600 "><strong className="text-gray-700">Author :</strong> {`${firstName} ${lastName}`}</p>
       <p className="text-sm text-slate-600"><strong className="text-gray-700">Role: </strong>{role}</p>
       <div className="flex items-center justify-between mt-2 ">
-        <a href={twitter}>
+        <a href={twitter} target="_blank">
           <FaSquareXTwitter className="text-xl hover:scale-105" />
         </a>
-        <a href={linkedin}>
+        <a href={linkedin} target="_blank">
           <FaLinkedin className="text-xl text-blue-600 hover:text-blue-800 hover:scale-105" />
         </a>
       </div>

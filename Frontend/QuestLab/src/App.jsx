@@ -19,7 +19,8 @@ function App() {
         <div className="grid grid-cols-6 gap-2 mt-5">
 
           {data.length > 0 && data.map((item,idx)=>{
-            return <Card key={idx} image={item.profileImg} firstName={item.firstName} lastName={item.lastName} role={item.role} linkedin={item.linkedin} twitter={item.twitter} />
+            
+            return <Card key={idx} image={item.image} firstName={item.firstName} lastName={item.lastName} role={item.role} linkedin={item.linkedin} twitter={item.twitter} />
           })}
         </div>
 
