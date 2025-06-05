@@ -36,7 +36,7 @@ async function addUser(req, res) {
       imageUrl = uploadImg.secure_url;
     }
 
-    await User.create({ ...payload, profileImg: imageUrl });
+    await User.create({ ...payload, image: imageUrl });
     res.json({ message: "User added successfully" });
   } catch (err) {
     res.json({
