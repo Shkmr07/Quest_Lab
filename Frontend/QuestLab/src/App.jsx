@@ -27,6 +27,7 @@ function App() {
     {modal && <div className="absolute  w-[100%] h-[100%] backdrop-blur-sm flex flex-col justify-center items-center  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <Form setModal={setModal} />
     </div>}
+    
     </>
   )
 
