@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ApiContext } from "../utils/contextApi";
 
 export default function Form({ setModal }) {
   const { inp,setInp,initialState } = useContext(ApiContext);
+  const [submission,setSubmission] = useState(false);
 
   function handleChange(e) {
     setInp((prev) => ({
@@ -24,6 +25,7 @@ export default function Form({ setModal }) {
     formData.append("image", inp.image); // important: name must match multer
 
     try {
+        setSubmission(true);
       const res = await fetch("https://quest-lab.onrender.com/api/form/addUser", {
         method: "POST",
         body: formData,
@@ -37,6 +39,8 @@ export default function Form({ setModal }) {
       setModal(false);
     } catch (err) {
       console.error("Error submitting form:", err);
+    }finally {
+        setSubmission(false);
     }
   }
 
@@ -79,7 +83,7 @@ export default function Form({ setModal }) {
         className="p-2 outline-none border border-slate-500 focus:border-blue-500 rounded"
         type="text"
         name="linkedin"
-        placeholder="LinkedIn"
+        placeholder="LinkedIn URL"
         onChange={handleChange}
         value={inp.linkedin}
       />
@@ -87,14 +91,14 @@ export default function Form({ setModal }) {
         className="p-2 outline-none border border-slate-500 focus:border-blue-500 rounded"
         type="text"
         name="twitter"
-        placeholder="Twitter"
+        placeholder="Twitter URL"
         onChange={handleChange}
         value={inp.twitter}
       />
       <input
         className="p-2 text-white font-semibold bg-green-500 hover:bg-green-600 rounded hover:scale-105"
         type="submit"
-        value="Submit"
+        value={submission ? "Submitting..." : "Submit"}
       />
     </form>
   );

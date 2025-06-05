@@ -16,7 +16,7 @@ function App() {
     <main>
         {loading && !error && <BiLoaderAlt className="text-4xl flex justify-self-center items-center animate-spin min-h-screen"/>}
         {error && <div className="text-xl flex justify-self-center items-center min-h-screen" >{error}</div>}
-        <div className="grid grid-cols-6 gap-2 mt-5">
+        <div className="flex flex-wrap justify-center  gap-2 mt-5">
 
           {data.length > 0 && data.map((item,idx)=>{
             
