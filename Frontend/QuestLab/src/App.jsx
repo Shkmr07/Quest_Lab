@@ -52,7 +52,7 @@ function App() {
           <Form setModal={setModal} />
           <IoMdClose
             onClick={() => setModal(false)}
-            className="absolute top-10 right-10 text-3xl hover:rotate-180 transition transform duration-500 ease-in-out text-slate-700"
+            className="absolute top-10 right-10 text-3xl hover:rotate-180 transition transform duration-500 ease-in-out text-slate-900"
           />
         </div>
       )}
