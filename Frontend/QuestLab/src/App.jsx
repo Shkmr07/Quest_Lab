@@ -48,7 +48,7 @@ function App() {
         </div>
       </main>
       {modal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md ">
+        <div className="fixed transition transform duration-500 ease-in-out inset-0 z-50 flex items-center justify-center backdrop-blur-md ">
           <Form setModal={setModal} />
           <IoMdClose
             onClick={() => setModal(false)}
