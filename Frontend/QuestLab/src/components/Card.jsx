@@ -12,8 +12,8 @@ export default function Card({
 }) {
   return (
     <div className="flex flex-col w-[250px] shadow-lg px-2 py-3 hover:scale-105 rounded-xl gap-2 hover:transition-all">
-      <div className="w-full h-36">
-        <img className="w-full h-full rounded object-cover" src={image} alt={firstName} />
+      <div className="w-full h-48  overflow-hidden">
+        <img className="w-full h-full rounded object-cover hover:scale-105 hover:opacity-70 transition transform duration-200 ease-in-out" src={image} alt={firstName} />
       </div>
       <p className="text-sm text-slate-600 "><strong className="text-gray-700">Author :</strong> {`${firstName} ${lastName}`}</p>
       <p className="text-sm text-slate-600"><strong className="text-gray-700">Role: </strong>{role}</p>

@@ -48,7 +48,7 @@ function App() {
         </div>
       </main>
       {modal && (
-        <div className="absolute  min-w-screen min-h-screen backdrop-blur-sm flex flex-col justify-center items-center  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute z-50  min-w-screen min-h-screen backdrop-blur-sm flex flex-col justify-center items-center  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Form setModal={setModal} />
           <IoMdClose
             onClick={() => setModal(false)}
